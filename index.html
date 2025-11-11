@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio | Sebastián Ignacio Saa Ahumada</title>
+  <meta name="description" content="Portafolio profesional de Sebastián Saa Ahumada – Ingeniería en Computación e Informática (UNAB). Ciberseguridad, desarrollo de software y análisis de datos." />
+  <style>
+    :root{
+      --bg:#0b0e14;          /* fondo oscuro elegante */
+      --panel:#111522;       /* paneles */
+      --muted:#8a94a6;       /* texto secundario */
+      --text:#e6e9ef;        /* texto principal */
+      --brand:#3ea6ff;       /* acento */
+      --brand-2:#7df29a;     /* acento secundario */
+      --card:#0f1422;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.3);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.5}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92vw);margin-inline:auto}
+
+    /* Header */
+    header{position:sticky;top:0;backdrop-filter:blur(10px);background:linear-gradient(180deg, rgba(11,14,20,.9), rgba(11,14,20,.6));z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .brand h1{font-size:16px;margin:0}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--text);opacity:.85}
+    nav a:hover{opacity:1;color:var(--brand)}
+
+    /* Hero */
+    .hero{padding:64px 0 28px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 600px at 70% -20%, rgba(62,166,255,.15), transparent 60%)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .title{font-size:40px;margin:0 0 10px}
+    .subtitle{color:var(--muted);margin:0 0 18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+    .badge{padding:6px 10px;border-radius:999px;background:#0e1424;border:1px solid rgba(255,255,255,.08);font-size:12px;color:#cfe7ff}
+    .cta{display:flex;gap:12px;margin-top:10px}
+    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#0f1628,#0c1322);color:var(--text)}
+    .btn.primary{background:linear-gradient(180deg,var(--brand),#2d6dfb);color:#081021;border:none}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+
+    /* Sections */
+    section{padding:42px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .section-title{font-size:22px;margin:0 0 16px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+    /* Lists */
+    .list{display:grid;gap:8px;margin:0;padding-left:18px}
+    .kv{display:grid;grid-template-columns:140px 1fr;gap:8px}
+
+    /* Project card */
+    .project{display:flex;flex-direction:column;gap:10px}
+    .project h3{margin:0;font-size:18px}
+    .chip{display:inline-block;padding:4px 8px;border:1px solid rgba(255,255,255,.1);border-radius:999px;font-size:12px;color:#d7ffe6;background:rgba(125,242,154,.08);margin-right:6px}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .title{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Sebastián Saa · Portafolio</h1>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#practica">Práctica</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#certificaciones">Certificaciones</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2 class="title">Ingeniería en Computación e Informática · UNAB</h2>
+          <p class="subtitle">Ciberseguridad • Desarrollo de software • Análisis de datos</p>
+          <div class="badges">
+            <span class="badge">Blue Team & SOC</span>
+            <span class="badge">Java · Python · SQL</span>
+            <span class="badge">Wireshark · Nmap · GNS3</span>
+            <span class="badge">PostgreSQL · Oracle</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#contacto">Contactar</a>
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="kv"><strong>Nombre</strong><span>Sebastián Ignacio Saa Ahumada</span></div>
+          <div class="kv"><strong>Ubicación</strong><span>Peñaflor, Santiago – Chile</span></div>
+          <div class="kv"><strong>Email</strong><span><a href="mailto:s.saaahumada@uandresbello.edu">s.saaahumada@uandresbello.edu</a></span></div>
+          <div class="kv"><strong>LinkedIn</strong><span><a href="#" target="_blank" rel="noopener">Perfil</a></span></div>
+          <div class="kv"><strong>GitHub</strong><span><a href="#" target="_blank" rel="noopener">Repositorio</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfil -->
+    <section id="perfil">
+      <div class="container grid-2">
+        <div>
+          <h3 class="section-title">Perfil Profesional</h3>
+          <div class="card">
+            <p>Soy estudiante de Ingeniería en Computación e Informática en la Universidad Andrés Bello, con interés en <strong>ciberseguridad, desarrollo de software y análisis de datos</strong>. Me caracterizo por ser <strong>responsable, adaptable y orientado a la mejora continua</strong>, con habilidades para trabajar en equipo, comunicar ideas técnicas de manera clara y afrontar desafíos tecnológicos con pensamiento crítico.</p>
+            <p>Mi experiencia en <strong>docencia universitaria</strong> y <strong>práctica profesional en Minsait–Indra</strong> me permitió combinar competencias técnicas y humanas, entendiendo la importancia del trabajo colaborativo, la disciplina y la seguridad en los sistemas. Busco aplicar mis conocimientos en <strong>protección de la información, automatización de procesos</strong> y <strong>análisis de seguridad</strong>, aportando a la transformación digital de las organizaciones.</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-title">Áreas de Interés</h3>
+          <div class="card list">
+            <div>• Ciberseguridad (Blue Team, SOC, Compliance)</div>
+            <div>• Desarrollo de software seguro</div>
+            <div>• Análisis de datos e inteligencia aplicada</div>
+            <div>• Automatización de procesos tecnológicos</div>
+            <div>• Redes e infraestructura</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <div class="container grid-2">
+        <div>
+          <h3 class="section-title">Habilidades Técnicas</h3>
+          <div class="card list">
+            <div>• Programación: Python, Java, SQL, C/C++</div>
+            <div>• Redes y seguridad: Wireshark, Nmap, Cisco Packet Tracer, GNS3</div>
+            <div>• Bases de datos: Oracle, PostgreSQL</div>
+            <div>• Análisis de datos: Pandas, Power BI (básico)</div>
+            <div>• Calidad de código: Kiuwan</div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-title">Habilidades Blandas</h3>
+          <div class="card list">
+            <div>• Comunicación efectiva</div>
+            <div>• Liderazgo y gestión de grupos</div>
+            <div>• Pensamiento analítico</div>
+            <div>• Trabajo colaborativo</div>
+            <div>• Responsabilidad y resiliencia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <div class="container">
+        <h3 class="section-title">Currículum Vitae</h3>
+        <div class="card">
+          <p>Descarga mi CV actualizado en PDF:</p>
+          <p><a class="btn" href="#" download>Descargar CV</a></p>
+          <p style="color:var(--muted);font-size:14px">(Sugerencia: sube tu CV PDF a este repositorio y reemplaza el enlace)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+      <div class="container">
+        <h3 class="section-title">Proyectos Destacados</h3>
+        <div class="grid-3">
+          <article class="card project">
+            <h3>Banco de Sangre · Plataforma Web</h3>
+            <p>Sistema para la gestión y trazabilidad de unidades de sangre entre centros de salud.</p>
+            <div>
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">React</span>
+            </div>
+            <p><strong>Rol:</strong> Líder técnico y backend · <strong>Resultados:</strong> Mejora de coordinación y trazabilidad.</p>
+            <p><a href="#" target="_blank" rel="noopener">Repositorio / Demo</a></p>
+          </article>
+          <article class="card project">
+            <h3>Chatbot CIADE · Soporte Estudiantil</h3>
+            <p>Chatbot para agendamiento y orientación académica con integración de correo y base de datos.</p>
+            <div>
+              <span class="chip">Dialogflow</span><span class="chip">Node.js</span><span class="chip">Firebase Auth</span><span class="chip">Neon + Prisma</span>
+            </div>
+            <p><strong>Rol:</strong> Full‑stack · <strong>Resultados:</strong> Reducción del 70% del tiempo de coordinación.</p>
+            <p><a href="#" target="_blank" rel="noopener">Repositorio / Demo</a></p>
+          </article>
+          <article class="card project">
+            <h3>Portafolio Web Personal</h3>
+            <p>Sitio para presentar proyectos, habilidades y contacto profesional.</p>
+            <div>
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Vercel/GitHub Pages</span>
+            </div>
+            <p><strong>Rol:</strong> Diseño y desarrollo · <strong>Resultados:</strong> Presencia profesional en línea.</p>
+            <p><a href="#" target="_blank" rel="noopener">Repositorio / Demo</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Práctica -->
+    <section id="practica">
+      <div class="container grid-2">
+        <div>
+          <h3 class="section-title">Experiencia de Práctica · Minsait (Indra)</h3>
+          <div class="card">
+            <p><strong>Periodo:</strong> Dic 2023 – Ene 2024</p>
+            <p><strong>Descripción:</strong> Desarrollo e implementación de software en entornos de certificación y producción para clientes del sector financiero.</p>
+            <ul class="list">
+              <li>Desarrollo con <strong>Java</strong> y <strong>Oracle</strong>, participación en pruebas y despliegues.</li>
+              <li>Procesos <strong>Batch</strong> y control de calidad con <strong>Kiuwan</strong>.</li>
+              <li>Documentación y trabajo colaborativo en equipos multidisciplinarios.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-title">Logros y Aprendizajes</h3>
+          <div class="card list">
+            <div>• Comprensión del ciclo de vida del software en ambientes corporativos.</div>
+            <div>• Mejores prácticas de documentación y testing.</div>
+            <div>• Colaboración efectiva y enfoque en calidad.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <div class="container grid-3">
+        <div class="card">
+          <h3>Desarrollo Web Full‑Stack</h3>
+          <p>Aplicaciones con React/Node/Express y bases de datos relacionales.</p>
+        </div>
+        <div class="card">
+          <h3>Auditoría y Soporte en Ciberseguridad</h3>
+          <p>Escaneo de vulnerabilidades, hardening básico y documentación de controles.</p>
+        </div>
+        <div class="card">
+          <h3>Análisis y Automatización</h3>
+          <p>Scripts en Python, ETL ligera y tableros introductorios (Power BI).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section id="certificaciones">
+      <div class="container grid-2">
+        <div>
+          <h3 class="section-title">Certificaciones y Cursos</h3>
+          <div class="card list">
+            <div>• Cisco CCNA (SRWE)</div>
+            <div>• Cisco CyberOps Associate (en curso)</div>
+            <div>• IBM – Data Science · AI Developer</div>
+            <div>• UAB – Big Data e impacto en la sociedad</div>
+            <div>• Udemy – Ciberseguridad Defensiva (en curso)</div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-title">Reconocimientos</h3>
+          <div class="card list">
+            <div>• 3er lugar – Olimpiadas de Ciencia de Datos UNAB (2024)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carta de presentación -->
+    <section id="carta">
+      <div class="container">
+        <h3 class="section-title">Carta de Presentación</h3>
+        <div class="card">
+          <p>Estimado/a:</p>
+          <p>Mi nombre es <strong>Sebastián Ignacio Saa Ahumada</strong>, estudiante de Ingeniería en Computación e Informática en la Universidad Andrés Bello. Busco integrarme a una organización donde pueda aplicar mis conocimientos en <strong>ciberseguridad</strong>, desarrollo y análisis de sistemas, aportando al fortalecimiento de la infraestructura tecnológica y la protección de datos.</p>
+          <p>Durante mi práctica en <strong>Minsait – Indra</strong>, participé en el ciclo de desarrollo de software, lo que me permitió comprender la importancia del trabajo colaborativo, la responsabilidad y la calidad en entornos exigentes. Complemento esta experiencia con certificaciones y proyectos en seguridad informática, análisis de datos y desarrollo web.</p>
+          <p>Me considero una persona <strong>comprometida, adaptable y orientada a la mejora continua</strong>, motivada por aprender y contribuir al crecimiento tecnológico de las organizaciones.</p>
+          <p><em>Atentamente,</em><br/>Sebastián Saa Ahumada · <a href="mailto:s.saaahumada@uandresbello.edu">s.saaahumada@uandresbello.edu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <div class="container grid-2">
+        <div>
+          <h3 class="section-title">Contacto</h3>
+          <div class="card list">
+            <div>• Email: <a href="mailto:s.saaahumada@uandresbello.edu">s.saaahumada@uandresbello.edu</a></div>
+            <div>• LinkedIn: <a href="#" target="_blank" rel="noopener">Perfil</a></div>
+            <div>• GitHub: <a href="#" target="_blank" rel="noopener">Repositorio</a></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="section-title">Disponibilidad</h3>
+          <div class="card">
+            <p>Interés en prácticas y posiciones junior en Ciberseguridad, Desarrollo y TI. Modalidad híbrida o remota.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Sebastián Saa. Hecho con HTML + CSS. Publicado en GitHub Pages.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
